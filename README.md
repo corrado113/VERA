@@ -8,11 +8,12 @@ S. Tripathi, C. Puligheddu, S. Pramanik, A. Garcia-Saavedra and C. F. Chiasserin
 If you use this dataset please consider citing our paper.
 ## Testing environment
 
-The attached dataset is built using 2 applications at the same time: 
-- a radio application - namely srsRAN - that is in charge of managing the LTE link, and 
-- a video streaming application, that transcodes a live video feed and transmits it to the client through the LTE network.
+The attached dataset is built using a server and a client, and 2 applications that run concurrently:
+- a radio application - namely srsRAN 20.10.1 - comprising a virtualized eNB (srsenb) and a lightweight 4G core (srsepc) in the server, and a UE as a client (srsue). The radio application manages the LTE link connecting the server to the client;
+- a video streaming application, that transcodes a live video feed (ffmpeg 3.1.6) and, through the LTE network, transmits it to the client which plays it using the mpv (v0.32.0) video player.
 
-The applications are colocated in an Edge host equipped with a 4-core@2.8GHz Intel i7-7700HQ CPU and 16 GB of 2400 MHz DDR4 memory.
+The server is hosted in Ubuntu 18.04 machine equipped with a 4-core@2.8GHz Intel i7-7700HQ CPU and 16 GB of 2400 MHz DDR4 memory.
+The client is hosted in a Ubuntu 20.04 machine equipped with a 4-core@1.8GHz Intel i7-8550U CPU and 16 GB of 2400 MHz DDR4 memory.
 
 ## Test parameters
 
